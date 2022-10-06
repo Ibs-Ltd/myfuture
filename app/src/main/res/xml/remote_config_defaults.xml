@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <entry>
+        <key>app_update_android</key>
+        <value>{
+            "version_name": "1.0.0",
+            "force_update": false,
+            "message": "adsdas ...",
+            "title": "New version available",
+            "version_code": 1
+            }</value>
+    </entry>
+
+
+</defaultsMap>

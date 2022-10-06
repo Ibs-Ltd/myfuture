@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_background"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.dashboard.homeProfile.ui.BasicUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margin20">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Basic Details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+
+            <ImageView
+                android:id="@+id/basicDetailEditIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingVertical="@dimen/margin10"
+                android:paddingLeft="@dimen/margin20"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llforEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="Email"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <EditText
+                android:id="@+id/et_Email"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_cool_grey_background"
+                android:editable="false"
+                android:hint="Enter email ID for ex: ron2@gmail.com"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/margin20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cool_grey1"
+                android:textSize="@dimen/textsize14" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewemail"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforEmail"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:id="@+id/llforWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewemail"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="Whatsapp Number"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <EditText
+                android:id="@+id/et_Whatsapp_Number"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_cool_grey_background"
+                android:editable="false"
+                android:hint="Enter whatsapp number for ex: 9876543210"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/margin20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cool_grey1"
+                android:textSize="@dimen/textsize14" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewwhatesapp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforWhatsapp"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:id="@+id/llforgender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewwhatesapp"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:paddingVertical="@dimen/margin5"
+                android:text="Gender"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_male"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+                <TextView
+                    android:id="@+id/tv_femaile"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+                <TextView
+                    android:id="@+id/tv_Others"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Others"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewgender"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforgender"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:id="@+id/llforState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewgender"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:paddingVertical="@dimen/margin5"
+                android:text="State"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:background="@drawable/simple_cool_grey_background"
+                android:id="@+id/stateSelectionLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/et_State"
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Please select State for ex: Punjab"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin25"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin5"
+                        android:src="@drawable/ic_arrow_down"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_forstaterecyler"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/llforState"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/border_edit_sky_blue"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin5"
+                    android:paddingBottom="@dimen/margin10"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/editStateLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <EditText
+                            android:id="@+id/et_select_state"
+                            style="@style/textViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:background="@null"
+                            android:hint="Please Search state!"
+                            android:padding="@dimen/margin15"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize14" />
+
+                        <ImageView
+                            android:id="@+id/serachClearIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="@dimen/margin10"
+                            android:src="@drawable/ic_clear"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewstatei"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/warm_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/editStateLL" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_state"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="200dp"
+                        android:padding="@dimen/margin10"
+                        android:scrollbars="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_max="200dp"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewstatei" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewstate"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforState"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:id="@+id/llforCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewstate"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="City"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <LinearLayout
+                android:background="@drawable/simple_cool_grey_background"
+                android:id="@+id/citySelectionLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/et_City"
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="Please select City for ex: Jalandhar"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/iv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin25"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin5"
+                        android:src="@drawable/ic_arrow_down"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_forcityrecyler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llforCity"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/border_edit_sky_blue"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin5"
+                    android:paddingBottom="@dimen/margin10"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_select_city"
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:background="@null"
+                        android:hint="Please Search city!"
+                        android:padding="@dimen/margin15"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/viewcity"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_select_city"
+                        android:background="@color/warm_gray"
+                        app:layout_constraintTop_toBottomOf="@+id/et_select_city" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_citylist"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="200dp"
+                        android:layout_below="@+id/viewcity"
+                        android:padding="@dimen/margin10"
+                        android:scrollbars="vertical"
+
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_max="200dp"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/viewcity" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewcitys"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforState"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <TextView
+            android:id="@+id/editBasicDetail"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginBottom="@dimen/margin20"
+            android:text="Edit details of basic information"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/textsize14" />
+
+        <LinearLayout
+            android:id="@+id/savingCancelBasicDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin20"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/saveBasicDetail"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/curved_orangish_btn"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/cancelBasicDetail"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin20"
+                android:background="@drawable/curved_white_btn"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

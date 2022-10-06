@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myfutureapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.commonsware.android.mapsv2.drag.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.myfutureapp.FutureApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TheProduct">
+
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <activity
+            android:name="com.myfutureapp.jobApplyLocationSelection.JobApplyLocationSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.myfutureapp.termsCondition.TermsConditionActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.myfutureapp.dashboard.bookmark.BookMarksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.jobDetail.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.enrollment.EnrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.enrollment.EnrollmentTermAndConditionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.jobDetail.JobDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.TheProduct" />
+        <activity
+            android:name="com.myfutureapp.dashboard.profile.ui.EmploymentDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.dashboard.searchJob.SearchJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.dashboard.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.myfutureapp.profile.ui.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.myfutureapp.login.OtpVerifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.myfutureapp.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.myfutureapp.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+
+        <service
+            android:name=".MessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_my_future" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/orange" />
+
+    </application>
+
+</manifest>

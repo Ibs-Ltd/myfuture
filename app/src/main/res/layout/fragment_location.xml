@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.profile.ui.LocationFragment">
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/mainLocationLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin30"
+            android:text="Where do you live?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize16" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250sp"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map"
+                class="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/img_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+            <ProgressBar
+                android:id="@+id/mapProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+            <LinearLayout
+                android:id="@+id/gpsLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin15"
+                android:background="@drawable/orange_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/margin5"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="Allow Location"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/citytv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:paddingHorizontal="@dimen/margin10"
+            android:paddingVertical="@dimen/margin10"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/cityView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:background="#979797"
+            android:visibility="gone" />
+
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:text="Or"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize16"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin20"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/margin5">
+
+            <TextView
+                android:id="@+id/cityManually"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="Select City Manually"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16" />
+
+            <LinearLayout
+                android:id="@+id/manuallyLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/searchBarRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp">
+
+
+                    <EditText
+                        android:id="@+id/searchET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:hint="Search"
+                        android:imeOptions="actionSend"
+                        android:singleLine="true"
+                        android:textColor="#717070"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cityListRVss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/searchBarRL"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_forcityrecylerLocation"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/llforCity"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/border_edit_sky_blue"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin10"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/searchLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_select_cityLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Please Search city!"
+                    android:padding="@dimen/margin15"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="visible" />
+
+
+                <ImageView
+                    android:id="@+id/serachClearIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="@dimen/margin10"
+                    android:src="@drawable/ic_clear"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewcity"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/searchLL"
+                android:background="@color/warm_gray">
+
+            </View>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cityListRV"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/viewcity"
+                android:padding="@dimen/margin10"
+                android:scrollbars="vertical"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/saveLocation"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16" />
+</LinearLayout>

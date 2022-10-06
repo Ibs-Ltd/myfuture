@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.dashboard.application.ui.OnGoingFragment">
+
+    <LinearLayout
+        android:id="@+id/loginLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin30"
+        android:background="@drawable/rounded_orangish_btn_enable"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_noun_user" />
+
+        <TextView
+            android:id="@+id/saveName"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:gravity="center"
+            android:text="Complete your login process"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize16" />
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <!-- Adding 15 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+            <include layout="@layout/shimmer_placeholder_application" />
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_ongoing_applications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:nestedScrollingEnabled="false" />
+
+    <TextView
+        android:id="@+id/noOngoingApplication"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No Ongoing Application Yet"
+        android:textColor="@color/warm_gray_three"
+        android:textSize="@dimen/textsize14"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

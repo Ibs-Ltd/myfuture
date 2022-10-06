@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/barIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="23% complete"
+            android:textColor="@color/orange" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:maxHeight="15dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:progress="23"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pgBr"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollViewLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/contineOther"
+        android:layout_below="@+id/barIndicator"
+        android:layout_marginTop="@dimen/margin30"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin10"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Your Graduation Course"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:visibility="gone"
+                android:id="@+id/graducationRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin15"
+                android:layout_marginTop="@dimen/margin30" />
+
+
+            <EditText
+                android:id="@+id/otherText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginVertical="@dimen/margin15"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/margin10"
+                android:paddingVertical="@dimen/margin10"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize16"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/contineView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:background="@color/black"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/contineOther"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin10"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_dark_black_btn"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</RelativeLayout>

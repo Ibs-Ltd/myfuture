@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/jobItemMainLL"
+    style="@style/cardItemViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin20"
+    android:layout_marginTop="@dimen/margin10"
+    android:layout_marginBottom="@dimen/margin10"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/margin5"
+    android:paddingVertical="@dimen/margin5"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin10"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin15"
+        android:layout_marginVertical="@dimen/margin10"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin10"
+        android:paddingVertical="@dimen/margin5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/id_company_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_greisgh_job_placeholder">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_placeholder" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/margin10"
+                android:layout_toLeftOf="@+id/id_bookmark"
+                android:layout_toRightOf="@id/id_company_icon"
+                android:fontFamily="@font/helvetica"
+                android:letterSpacing="0.05"
+                android:maxLines="2"
+                android:text="Company Name"
+                android:textColor="#173147"
+                android:textSize="@dimen/textsize16"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/id_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/ic_bookmarks_unselected" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_job_title"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Marketing Analyst"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/margin20"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/ic_part_time" />
+
+                <TextView
+                    android:id="@+id/id_job_timing_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin5"
+                    android:layout_marginVertical="@dimen/margin15"
+                    android:fontFamily="@font/helvetica"
+                    android:letterSpacing="0.05"
+                    android:text="Full Time"
+                    android:textColor="@color/warm_gray_three"
+                    android:textSize="@dimen/textsize12"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_salary"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_work_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin5"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/helvetica"
+                android:letterSpacing="0.05"
+                android:maxLines="1"
+                android:text="Work exp: Freshers Can Apply"
+                android:textColor="@color/warm_gray_three"
+                android:textSize="@dimen/textsize12" />
+
+            <TextView
+                android:id="@+id/jobVacancies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:letterSpacing="0.05"
+                android:text=""
+                android:textColor="@color/warm_gray_three"
+                android:textSize="@dimen/textsize12" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="-5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_location_on_24" />
+
+            <TextView
+                android:id="@+id/id_location"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin5"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/warm_gray_three"
+                android:textSize="@dimen/textsize12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deadlineLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:letterSpacing="0.05"
+                android:text="Deadline: "
+                android:textColor="@color/tomato"
+                android:textSize="@dimen/textsize12" />
+
+            <TextView
+                android:id="@+id/id_deadline_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/helvetica"
+                android:letterSpacing="0.05"
+                android:text="22-11-2020"
+                android:textColor="@color/warm_gray_three"
+                android:textSize="@dimen/textsize12" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

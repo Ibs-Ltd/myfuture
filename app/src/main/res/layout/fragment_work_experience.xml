@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.profile.ui.WorkExperienceFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="70% complete"
+            android:textColor="@color/orange" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:maxHeight="15dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:id="@+id/seekBar"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout> </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            style="@style/textViewStyle"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin30"
+            android:gravity="center"
+            android:text="Do you have any work experience?"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/yesWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin15"
+                android:layout_weight="0.5"
+                android:background="@drawable/grey_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/margin5">
+
+                <TextView
+                    android:id="@+id/yesTV"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="Yes"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin15"
+                android:layout_weight="0.5"
+                android:background="@drawable/grey_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/margin5">
+
+                <TextView
+                    android:id="@+id/NOTV"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+
+                    android:text="No"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

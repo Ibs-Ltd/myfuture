@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.profile.ui.WorkYearExperienceFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="88% complete"
+            android:textColor="@color/orange" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:maxHeight="15dp"
+                android:id="@+id/seekBar"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:progress="88"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_marginBottom="@dimen/margin10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_marginBottom="@dimen/margin15"
+                    android:text="Your 12th score"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize16" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:padding="@dimen/margin10"
+                        android:id="@+id/percentScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/orange_btn_left_curve"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/margin5">
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/margin10"
+                            android:paddingVertical="5dp"
+                            android:text="  %  "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="@dimen/margin10"
+                        android:id="@+id/cgpaScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/grey_btn_right_curve"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingVertical="@dimen/margin5">
+
+                        <TextView
+                            style="@style/textViewStyle"
+
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/margin10"
+                            android:paddingVertical="5dp"
+                            android:text="CGPA"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize16" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cgpaLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/margin10"
+                    android:paddingVertical="@dimen/margin10"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/cgpaMarks"
+                        style="@style/textViewStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="_._"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:paddingLeft="@dimen/margin10"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize24"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/cgpaMax"
+                        style="@style/textViewStyle"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="2"
+                        android:paddingRight="@dimen/margin10"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize24"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/percentageLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/margin10"
+                    android:paddingVertical="@dimen/margin10"
+                    android:visibility="visible">
+
+
+                    <EditText
+                        android:id="@+id/percMarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:minWidth="@dimen/margin5"
+                        android:hint="00"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize24"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/markTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/margin10"
+                    android:paddingVertical="@dimen/margin10"
+                    android:singleLine="true"
+                    android:text="_._/10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize18"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:background="@color/black" />
+
+
+                <EditText
+                    android:id="@+id/marks"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:layout_marginTop="@dimen/margin30"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="Enter Marks"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:paddingHorizontal="@dimen/margin10"
+                    android:paddingVertical="@dimen/margin10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize24"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/margin30"
+                    android:background="@color/black"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/continueGraduuationScore"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16" />
+</LinearLayout>

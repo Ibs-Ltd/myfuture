@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/titleMainLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin10"
+    android:background="@drawable/dark_slate_blue_background_btn">
+
+    <TextView
+        style="@style/textViewStyle"
+        android:id="@+id/id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin10"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/textsize14" />
+
+</LinearLayout>
+

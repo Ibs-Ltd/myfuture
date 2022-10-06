@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/topcorneronly"
+    android:elevation="10dp"
+    android:orientation="vertical"
+    app:behavior_fitToContents="false"
+    app:behavior_halfExpandedRatio="0.8"
+    app:behavior_hideable="false"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <View
+            android:id="@+id/designStrip"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin30"
+            android:background="#173147"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="@dimen/margin20"
+            android:text="Schedule your interview"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/designStrip" />
+
+        <RelativeLayout
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:padding="@dimen/margin10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin30"
+                android:orientation="horizontal"
+                android:background="@drawable/border_edit_sky_blue">
+
+                <Spinner
+                    android:id="@+id/interviewTimeSpinner"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:paddingHorizontal="@dimen/margin20"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="@dimen/margin30"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin20"
+                android:layout_gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/select_date_time"
+                android:textColor="#173147"
+                android:textSize="@dimen/textsize16" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/scheduleNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginBottom="@dimen/margin20"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="Schedule"
+            android:textColor="#173147"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/scheduleLater"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin20"
+            android:layout_gravity="center"
+            android:paddingVertical="10dp"
+            android:text="Schedule Later"
+            android:textColor="#173147"
+            android:textSize="@dimen/textsize16" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

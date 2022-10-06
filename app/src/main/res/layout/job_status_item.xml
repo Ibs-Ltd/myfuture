@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/aboveView"
+            android:layout_centerInParent="true"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_above="@id/jobStatusCircle"
+            android:layout_gravity="center"
+            android:background="#dfdfdf" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/jobStatusCircle"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_orange_dot"
+            android:layout_width="@dimen/margin15"
+            android:layout_height="@dimen/margin15"
+            />
+
+        <View
+            android:id="@+id/belowView"
+            android:layout_below="@id/jobStatusCircle"
+            android:layout_centerInParent="true"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#dfdfdf" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/textViewStyle"
+            android:id="@+id/statusDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/warm_gray_three"
+            android:textSize="@dimen/textsize11" />
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/margin5"
+            android:id="@+id/scheduleInterviewLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin5"
+            android:background="@drawable/round_orange_border"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:src="@drawable/orange_calender" />
+
+            <TextView
+                style="@style/textViewStyle"
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin5"
+                android:text="Schedule Interview"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/textsize13" />
+        </LinearLayout>
+        <TextView
+            style="@style/textViewStyle"
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin10"
+            android:text="--"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize13" />
+
+    </LinearLayout>
+
+</LinearLayout>

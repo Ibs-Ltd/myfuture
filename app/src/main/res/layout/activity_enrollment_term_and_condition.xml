@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.enrollment.EnrollmentTermAndConditionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/margin20"
+        android:theme="@style/Theme.MyApplication.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/margin20"
+                android:id="@+id/hambarIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/margin20"
+                android:src="@drawable/ic_back_arrow" />
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Enrol with Sunstone"
+                    android:textColor="@color/black_three"
+                    android:textSize="@dimen/textsize16" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enrollSubmit"
+        android:layout_below="@+id/appBar"
+        android:id="@+id/scrollView"
+        android:layout_marginVertical="@dimen/margin20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_edit_grey_with_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Step 1"
+                        android:textColor="@color/warm_gray_three"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Enroll"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:src="@drawable/ic_add_user_step_one" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_arrow_forward" />
+
+                <LinearLayout
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_edit_grey_with_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Step 2"
+                        android:textColor="@color/warm_gray_three"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Prepare"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:src="@drawable/ic_time_to_study_step_two" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_arrow_forward" />
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_edit_grey_with_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Step 3"
+                        android:textColor="@color/warm_gray_three"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Interview"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:src="@drawable/ic_telephonic_interview_step_three" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin30"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/border_edit_grey_with_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Step 4"
+                        android:textColor="@color/warm_gray_three"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Get Placed"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:src="@drawable/ic_check_briefcase_step_four" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_baseline_arrow_forward" />
+
+                <LinearLayout
+
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/border_edit_grey_with_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin10">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Step 5"
+                        android:textColor="@color/warm_gray_three"
+                        android:textSize="@dimen/textsize10" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Pay"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:src="@drawable/ic_pay_step_five" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/white_btn"
+                android:orientation="vertical"
+                android:padding="@dimen/margin10">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:text="If your salary is:"
+                    android:textColor="#222222"
+                    android:textSize="@dimen/textsize14" />
+
+                <TextView
+                    android:id="@+id/tv_salaryMonthly"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:layout_weight="1"
+                    android:text="60,000/month"
+                    android:textColor="#222222"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin10">
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:id="@+id/seek_bar_indicators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="@dimen/margin10"
+                        android:outlineAmbientShadowColor="@color/warm_gray_three"
+                        android:outlineSpotShadowColor="@color/warm_gray_three"
+                        app:isb_max="100000"
+                        app:isb_min="10000"
+                        app:isb_only_thumb_draggable="true"
+                        app:isb_progress="60000"
+                        app:isb_seek_smoothly="true"
+                        app:isb_thumb_adjust_auto="true"
+                        app:isb_thumb_color="#ffa328"
+                        app:isb_thumb_drawable="@drawable/ic_oval"
+                        app:isb_thumb_size="@dimen/margin20"
+                        app:isb_track_background_color="#e9e9e9"
+                        app:isb_track_background_size="10dp"
+                        app:isb_track_progress_color="#ffa328"
+                        app:isb_track_progress_size="10dp"
+                        app:isb_track_rounded_corners="true"
+                        app:isb_user_seekable="true">
+
+                    </com.warkiz.widget.IndicatorSeekBar>
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seek_bar_indicators"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:text="₹ 10,000"
+                        android:textColor="#222222"
+                        android:textSize="@dimen/textsize12" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seek_bar_indicators"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin5"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:text="₹ 1,00,000"
+                        android:textColor="#222222"
+                        android:textSize="@dimen/textsize12" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="No Cost EMI 12months: ₹ "
+                        android:textColor="#222222"
+                        android:textSize="@dimen/textsize14" />
+
+                    <TextView
+                        android:id="@+id/tv_monthEMI"
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="5,000/month"
+                        android:textColor="#222222"
+
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Total Fees Payable: ₹ "
+
+                        android:textColor="#222222"
+                        android:textSize="@dimen/textsize14" />
+
+                    <TextView
+                        android:id="@+id/tv_totalpay"
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="60,000"
+
+                        android:textColor="#222222"
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/jobItemMainLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginLeft="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginRight="@dimen/margin15"
+                android:layout_marginBottom="@dimen/margin15"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                style="@style/cardItemViewStyle"
+                android:gravity="center"
+                android:outlineAmbientShadowColor="@color/cool_grey"
+                android:outlineSpotShadowColor="@color/cool_grey"
+                android:paddingHorizontal="@dimen/margin5"
+                android:paddingVertical="@dimen/margin5"
+                app:cardCornerRadius="@dimen/margin5"
+                card_view:cardElevation="40dp"
+                card_view:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dark_sky_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin20">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            style="@style/textViewStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="After your placement "
+                            android:textAlignment="center"
+                            android:textColor="@color/warm_gray_three"
+                            android:textSize="@dimen/textsize14"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="you have to pay "
+                            android:textColor="@color/warm_gray_three"
+                            android:textSize="@dimen/textsize14"
+                            android:visibility="gone" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="amount"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize14"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tv_name2"
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="equal to "
+                            android:textColor="@color/warm_gray_three"
+                            android:textSize="@dimen/textsize14" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 months "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize14"
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="of your salary"
+                            android:textColor="@color/warm_gray_three"
+                            android:textSize="@dimen/textsize14"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/agreeTremAndCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top" />
+
+                <TextView
+                    android:id="@+id/termsConditionTv"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="I agree to the terms and conditions and after placement I will pay the amount equal to 2 months of my salary"
+                    android:textColor="@color/black_three"
+                    android:textSize="@dimen/textsize14" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="I agree to the "
+                            android:textColor="@color/black_three"
+                            android:textSize="@dimen/textsize12" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoLink="none"
+                            android:maxLines="1"
+                            android:text="terms and conditions"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/textsize12"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/textViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text=" and after"
+                            android:textColor="@color/black_three"
+                            android:textSize="@dimen/textsize12" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-3dp"
+                        android:text="placement. I will pay the amount equal to 2 months of my salary"
+                        android:textColor="@color/black_three"
+                        android:textSize="@dimen/textsize12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/enrollSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginBottom="@dimen/margin20"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16"
+        style="@style/textViewStyle"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_width="4dp"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</RelativeLayout>

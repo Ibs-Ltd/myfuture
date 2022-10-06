@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/margin20"
+    android:paddingTop="@dimen/margin12"
+    android:paddingBottom="@dimen/margin30"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.login.LoginActivity">
+
+
+    <TextView
+        style="@style/textViewStyle"
+        android:id="@+id/skipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="@color/dark_orange"
+        android:textSize="@dimen/textsize16"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyFuture"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/margin30"
+            android:textStyle="bold"
+            style="@style/textViewStyle"/>
+
+        <TextView
+            android:visibility="gone"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="by Sunstone"
+            android:textColor="@color/warm_gray_three"
+            android:textSize="@dimen/textsize14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin20"
+            android:id="@+id/jobEligibileHeading"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please Enter Your Mobile Number"
+            android:textColor="@color/warm_gray_three"
+            android:textSize="@dimen/textsize16" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mobile_icon" />
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin15"
+                android:layout_marginRight="@dimen/margin5"
+                android:text="+91 "
+                android:textSize="@dimen/textsize16" />
+
+            <EditText
+                style="@style/textViewStyle"
+                android:id="@+id/numberLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/margin10"
+                android:paddingVertical="@dimen/margin10"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bright_sky_blue" />
+
+        <TextView
+            android:id="@+id/tvErrorTV"
+            android:layout_width="match_parent"
+            android:textColor="@color/tomato"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:textSize="@dimen/textsize12"
+            android:visibility="gone" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin20"
+        android:layout_marginTop="@dimen/margin15"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:visibility="gone"
+            android:id="@+id/agreeTremAndCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/termsConditionTv"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="I agree to the terms and conditions and privacy policy"
+            android:textColor="@color/black_three"
+            android:textSize="@dimen/textsize14" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="I agree to the "
+                    android:textColor="@color/black_three"
+                    android:textSize="@dimen/textsize12" />
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoLink="none"
+                    android:maxLines="1"
+                    android:text="terms and conditions"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/textsize12"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text=" and after"
+                    android:textColor="@color/black_three"
+                    android:textSize="@dimen/textsize12" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dp"
+                android:text="placement. I will pay the amount equal to 2 months of my salary"
+                android:textColor="@color/black_three"
+                android:textSize="@dimen/textsize12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        style="@style/textViewStyle"
+        android:id="@+id/contineLogin"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_width="4dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</LinearLayout>

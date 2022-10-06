@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="start"
+    android:id="@+id/llforPre"
+    android:layout_marginTop="@dimen/margin10"
+    android:layout_marginLeft="@dimen/margin10"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_background_normal"
+        android:id="@+id/llfor"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin10"
+            android:paddingBottom="@dimen/margin10"
+            android:gravity="center"
+            android:id="@+id/tv_cityName"
+            android:paddingRight="@dimen/margin15"
+            android:paddingLeft="@dimen/margin15"
+            android:text="Delhi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize12" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="@dimen/margin5"
+            android:id="@+id/iv_cancel"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin5"
+            android:src="@drawable/ic_cancel_icon">
+
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/margin10"
+        android:text="1st Preference"
+        android:textColor="#4a4a4a"
+        android:id="@+id/tv_preference"
+        android:layout_gravity="center"
+        android:textSize="@dimen/textsize14" />
+</LinearLayout>

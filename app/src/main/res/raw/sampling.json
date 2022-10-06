@@ -1,0 +1,45 @@
+{
+	"eligibility_creteria": [
+		{
+			"data": [
+				{
+					"key": "12th Score",
+					"value": "Greater than or equal to 80%"
+				}
+			]
+		},
+		{
+			"data": [
+				{
+					"key": "10th Score",
+					"value": "Greater than or equal to 80%"
+				},
+				{
+					"key": "Graduation Score",
+					"value": "Greater than or equal to 80%"
+				},{
+					"key": "10th Score",
+					"value": "Greater than or equal to 80%"
+				},
+				{
+					"key": "Graduation Score",
+					"value": "Greater than or equal to 80%"
+				},{
+					"key": "10th Score",
+					"value": "Greater than or equal to 80%"
+				},
+				{
+					"key": "Graduation Score",
+					"value": "Greater than or equal to 80%"
+				},{
+					"key": "10th Score",
+					"value": "Greater than or equal to 80%"
+				},
+				{
+					"key": "Graduation Score",
+					"value": "Greater than or equal to 80%"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin15"
+    android:layout_marginVertical="@dimen/margin10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/id_company_name"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin10"
+            android:layout_toLeftOf="@+id/id_date"
+            android:background="@color/grey_color"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize14"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id_date"
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/warm_gray_three"
+            android:textSize="@dimen/textsize12" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_job_title"
+
+        style="@style/textViewStyle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:background="@color/grey_color"
+        android:text="-"
+        android:textColor="@color/warm_gray_four"
+        android:textSize="@dimen/textsize14" />
+
+    <TextView
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:background="@color/grey_color"
+        android:text=""
+        android:textColor="@color/pink"
+        android:textSize="@dimen/textsize12" />
+
+    <LinearLayout
+
+        android:id="@+id/scheduleInterviewLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginBottom="@dimen/margin5"
+        android:background="@drawable/round_orange_border"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin5"
+            android:src="@drawable/orange_calender" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Schedule Interview"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/textsize10" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/scheduleInterviewText"
+        style="@style/textViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:text="To proceed, schedule your interview"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize12"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/id_Link"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin5"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="Link :"
+        android:textColor="@color/grey_color"
+        android:textSize="@dimen/textsize10"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+
+

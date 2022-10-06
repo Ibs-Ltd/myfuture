@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.profile.ui.GenderFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="52% complete"
+            android:textColor="@color/orange" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:id="@+id/seekBar"
+                android:maxHeight="15dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:progress="52"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin30"
+            android:layout_marginBottom="@dimen/margin10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/postGraduationCourseTV"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginBottom="@dimen/margin15"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/postGraduationCourseSpecialTV"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin5"
+                android:text="Select Specialisation"
+                android:textColor="#707070"
+                android:textSize="@dimen/textsize16" />
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin30"
+                android:text="Your Post Graduation Year"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16" />
+
+            <EditText
+                android:id="@+id/yearTV"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin30"
+
+                android:layout_marginTop="@dimen/margin30"
+                android:layout_marginRight="@dimen/margin10"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="Enter Year"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingHorizontal="@dimen/margin10"
+                android:paddingVertical="@dimen/margin10"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize24" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:background="@color/black" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/continueGraduuationYear"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16" />
+
+</LinearLayout>

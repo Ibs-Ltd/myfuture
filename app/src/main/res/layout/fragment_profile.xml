@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llmain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/loginLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin30"
+                android:background="@drawable/rounded_orangish_btn_enable"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_noun_user" />
+
+                <TextView
+                    android:id="@+id/saveName"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:gravity="center"
+                    android:text="Complete your login process"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profileLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin15"
+                    android:layout_marginTop="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profilePic"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_vector_default_profile" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_userName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Navdeep"
+                            android:textColor="#4a4a4a"
+                            android:textSize="@dimen/textsize18" />
+
+                        <TextView
+                            android:id="@+id/tv_mbile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin5"
+                            android:layout_weight="1"
+                            android:text="+91 8284862529"
+                            android:textColor="#999999"
+                            android:textSize="@dimen/textsize16" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/light_blue_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/margin10"
+                        android:text="Basic Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16" />
+
+                    <ImageView
+                        android:id="@+id/iv_Basic_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin10"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llBasic_Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_blue_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f0f0f0"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:id="@+id/llforEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Email"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/et_Email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:editable="false"
+                                android:hint="Enter email ID for ex: ron2@gmail.com"
+                                android:inputType="text"
+                                android:padding="@dimen/margin5"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewemail"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/llforEmail"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:id="@+id/llforWhatsapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/viewemail"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Whatsapp Number"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/et_Whatsapp_Number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:editable="false"
+                                android:hint="Enter whatsapp number for ex: 9876543210"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:padding="@dimen/margin5"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewwhatesapp"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/llforWhatsapp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:id="@+id/llforgender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/viewwhatesapp"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Gender"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/margin10"
+                                android:paddingBottom="@dimen/margin10">
+
+                                <TextView
+                                    android:id="@+id/tv_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/black_background_normal"
+                                    android:paddingLeft="@dimen/margin20"
+                                    android:paddingTop="8dp"
+                                    android:paddingRight="@dimen/margin20"
+                                    android:paddingBottom="8dp"
+                                    android:text="Male"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <TextView
+                                    android:id="@+id/tv_femaile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin10"
+                                    android:background="@drawable/border_black_white_background"
+                                    android:paddingLeft="@dimen/margin20"
+                                    android:paddingTop="8dp"
+                                    android:paddingRight="@dimen/margin20"
+                                    android:paddingBottom="8dp"
+                                    android:text="Female"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <TextView
+                                    android:id="@+id/tv_Others"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin10"
+                                    android:background="@drawable/border_black_white_background"
+                                    android:paddingLeft="@dimen/margin20"
+                                    android:paddingTop="8dp"
+                                    android:paddingRight="@dimen/margin20"
+                                    android:paddingBottom="8dp"
+                                    android:text="Others"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewgender"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/llforgender"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:id="@+id/llforState"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/viewgender"
+                            android:layout_marginHorizontal="@dimen/margin15"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin10"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="State"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12"
+                                    android:visibility="visible" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <Spinner
+                                    android:id="@+id/spinstate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center_horizontal"
+                                    android:popupBackground="@android:color/white" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_State"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="please select State for ex: Punjab"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/iv_state"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_arrow_down"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/viewstate"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/llforState"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:id="@+id/llforCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/viewstate"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin10"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="City"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <Spinner
+                                    android:id="@+id/spinCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="8dp"
+                                    android:popupBackground="@android:color/white"
+                                    android:scrollbars="none"
+                                    android:spinnerMode="dropdown" />
+
+                                <ImageView
+                                    android:id="@+id/iv_cityname"
+                                    android:layout_width="45dp"
+                                    android:layout_height="@dimen/margin40"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_arrow_down"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/et_City"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="please select City for ex: Jalandhar"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/iv_city"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_arrow_down"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_submitBasicDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/llforCity"
+                            android:layout_marginLeft="@dimen/margin60"
+                            android:layout_marginTop="@dimen/margin20"
+                            android:layout_marginRight="@dimen/margin60"
+                            android:layout_marginBottom="@dimen/margin20"
+                            android:background="@drawable/rounded_greish_btn_disable"
+                            android:text="Submit"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/ll_forstaterecyler"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@+id/llforState"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:layout_marginRight="@dimen/margin10"
+                            android:background="@drawable/border_edit_sky_blue"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/margin10"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/et_select_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:background="@null"
+                                android:hint="Please Search state!"
+                                android:padding="@dimen/margin15"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize14" />
+
+                            <View
+                                android:id="@+id/viewstatei"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/et_select_state"
+                                android:background="@color/warm_gray"></View>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_state"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_below="@+id/viewstatei"
+                                android:padding="@dimen/margin10"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_forcityrecyler"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@+id/llforCity"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:layout_marginRight="@dimen/margin10"
+                            android:background="@drawable/border_edit_sky_blue"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/margin10"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/et_select_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:background="@null"
+                                android:hint="Please Search city!"
+                                android:padding="@dimen/margin15"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize14"
+                                android:visibility="visible" />
+
+                            <View
+                                android:id="@+id/viewcity"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@+id/et_select_city"
+                                android:background="@color/warm_gray">
+
+                            </View>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_citylist"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_below="@+id/viewcity"
+                                android:padding="@dimen/margin10"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin5"
+                    android:background="@color/light_blue_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/margin10"
+                        android:text="Academic Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16" />
+
+                    <ImageView
+                        android:id="@+id/iv_Academic_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin10"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAcademic_Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_blue_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f0f0f0"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Class 10th Score"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_class10thpercent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Class 10th Score for ex: 60%"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Class 12th Score"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_class12thpercent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Class 12th Score ex: 60%"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Graduation Degree"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_graduation_Degree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="Enter Graduation Degree ex: B-Tech"
+                                    android:inputType="text"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize12" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Graduation Year"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_graduation_Year"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Graduation Degree ex: 2016"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Graduation Percentage/CGPA"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_graduation_Percentage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Graduation Percentage/CGPA ex:60%"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Graduation Specialisation"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_graduation_Specialisation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="Enter Graduation Specialisation ex: Computer Science"
+                                    android:inputType="text"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Post Graduation Degree"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_Postgraduation_Degree"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="Enter Post Graduation Degree ex:M-Tech"
+                                    android:inputType="text"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Post Graduation Year"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_Postgraduation_Year"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Post Graduation Year ex:2019"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Post Graduation Percentage/CGPA"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_Postgraduation_Percentage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@null"
+                                    android:editable="false"
+                                    android:hint="Enter Graduation Percentage/CGPA ex:60%"
+                                    android:inputType="number"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="@dimen/margin5"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Post Graduation Specialisation"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <EditText
+                                    android:id="@+id/et_Postgraduation_Specialisation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="Enter Post Graduation Specialisation ex:Computer Science"
+                                    android:inputType="text"
+                                    android:padding="@dimen/margin5"
+                                    android:textColor="@color/black"
+                                    android:textColorHint="@color/cool_grey1"
+                                    android:textSize="@dimen/textsize14" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:paddingHorizontal="@dimen/margin10"
+                                android:paddingVertical="@dimen/margin5"
+                                android:src="@drawable/ic_edit"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_submitAcademicDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/margin60"
+                            android:layout_marginTop="@dimen/margin20"
+                            android:layout_marginRight="@dimen/margin60"
+                            android:layout_marginBottom="@dimen/margin20"
+                            android:background="@drawable/rounded_greish_btn_disable"
+                            android:text="Submit"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin5"
+                    android:background="@color/light_blue_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/margin10"
+                        android:text="Personal Details"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16" />
+
+                    <ImageView
+                        android:id="@+id/iv_Personal_Details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin10"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llPersonal_Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/light_blue_grey" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f0f0f0"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Parent’s Name"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/et_parentsName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent_color"
+                                android:hint="Enter Parent’s Name ex:Father or Mother"
+                                android:paddingBottom="@dimen/margin10"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Parent’s Relation"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/et_parentRelation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent_color"
+                                android:hint="Enter Parent’s Relation ex: Father"
+                                android:paddingBottom="@dimen/margin10"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Parent’s Contact Number"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/etparentContactNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent_color"
+                                android:hint="Enter Parent’s Contact Number ex: +919876543210"
+                                android:paddingBottom="@dimen/margin10"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin15"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:text="Permanent Address"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize12" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="@dimen/margin10"
+                                    android:paddingVertical="@dimen/margin5"
+                                    android:src="@drawable/ic_edit"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/etpermanentAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/transparent_color"
+                                android:hint="Enter Permanent Address ex: Uttrakhand"
+                                android:paddingBottom="@dimen/margin10"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/cool_grey1"
+                                android:textSize="@dimen/textsize14" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:background="@color/light_blue_grey" />
+
+                        <TextView
+                            android:id="@+id/tv_submitPersonalDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="@dimen/margin60"
+                            android:layout_marginTop="@dimen/margin20"
+                            android:layout_marginRight="@dimen/margin60"
+                            android:layout_marginBottom="@dimen/margin20"
+                            android:background="@drawable/rounded_greish_btn_disable"
+                            android:text="Submit"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin5"
+                    android:background="@color/light_blue_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin15"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="@dimen/margin10"
+                        android:text="Work Experience"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16" />
+
+                    <ImageView
+                        android:id="@+id/iv_Work_Experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/margin10"
+                        android:paddingVertical="@dimen/margin10"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llWork_Experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f1f2f7"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin15"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingVertical="@dimen/margin5"
+                            android:text="Employment"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize12" />
+
+                        <TextView
+                            android:id="@+id/tv_addExperience"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin10"
+                            android:layout_weight="1"
+                            android:padding="@dimen/margin10"
+                            android:paddingVertical="@dimen/margin5"
+                            android:text="ADD"
+                            android:textAlignment="textEnd"
+                            android:textColor="#3a6cc7"
+                            android:textSize="@dimen/textsize12" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin15"
+                        android:layout_marginBottom="@dimen/margin10">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_recyclerworkexp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cardviewhome"
+                            android:layout_marginTop="@dimen/margin15" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="@dimen/margin5"
+                    android:background="@color/light_blue_grey" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

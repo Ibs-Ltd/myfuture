@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey_background"
+    tools:context="com.myfutureapp.dashboard.homeProfile.ui.AcademicUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margin20">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Academic Details"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+
+            <ImageView
+                android:id="@+id/academicDetailEditIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingVertical="@dimen/margin10"
+                android:paddingLeft="@dimen/margin20"
+                android:src="@drawable/ic_edit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tenthTitile"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="10th Score in "
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <RadioGroup
+                android:id="@+id/tenthRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin10"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin15">
+
+                <RadioButton
+                    android:id="@+id/tenthPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="% Age"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/tenthCGPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:checked="false"
+                    android:text="CGPA"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/cgpaTenthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_white_background"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/cgpaTenthMarks"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="0.0"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:minWidth="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14" />
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14" />
+
+                <EditText
+                    android:id="@+id/cgpaTenthMax"
+                    style="@style/textViewStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:paddingRight="@dimen/margin10"
+                    android:singleLine="true"
+                    android:text="10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/percentageTenthLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_white_background"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/percTenthMarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="00.00"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_tenth"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_cool_grey_background"
+                android:editable="false"
+                android:hint="Enter 10th marks "
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/margin20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cool_grey1"
+                android:textSize="@dimen/textsize14"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewbelow10th"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforEmail"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/twelveTitile"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="12th Score in "
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <RadioGroup
+                android:id="@+id/twelveRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin10"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin15">
+
+                <RadioButton
+                    android:id="@+id/twelvePercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:checked="false"
+                    android:text="% Age"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/twelveCGPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="CGPA"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/cgpaTwelveLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_cool_grey_background"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/cgpaTwelveMarks"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="0.0"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:minWidth="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14" />
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="/"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14" />
+
+                <EditText
+                    android:id="@+id/cgpaTwelveMax"
+                    style="@style/textViewStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:paddingRight="@dimen/margin10"
+                    android:singleLine="true"
+                    android:text="10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/percentageTwelveLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_white_background"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/percTwelveMarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="00.00"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize14"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_twelve"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/simple_cool_grey_background"
+                android:editable="false"
+                android:hint="Enter 12th marks "
+                android:inputType="text"
+                android:paddingHorizontal="@dimen/margin20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/cool_grey1"
+                android:textSize="@dimen/textsize14"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewbelow12th"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/llforEmail"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+
+        <LinearLayout
+            android:id="@+id/graduationDoneLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="Do you have graduation degree?"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <RadioGroup
+                android:id="@+id/graduationDoneRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin10"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin15">
+
+                <RadioButton
+                    android:id="@+id/garduationYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/garduationNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:checked="false"
+                    android:text="No"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/gradutaionDoneBelow"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey" />
+
+        <LinearLayout
+            android:id="@+id/graduationDetailsMainLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Graduation Degree"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <EditText
+                    android:id="@+id/etGraduationDegree"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/graduationDegree"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="5dp" />
+
+                    <EditText
+                        android:id="@+id/otherGradutionET"
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/simple_white_background"
+                        android:editable="false"
+                        android:hint="Enter course Name"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/margin20"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/gradutaionDegreeBelow"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:id="@+id/graduationSpecialisationLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Graduation Specialisation"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <EditText
+                    android:id="@+id/etGraduationSpecialisationDegree"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/graduationSpecialisationDegree"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="5dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/gradutaionSpecialisationDegreeBelow"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Graduation Year"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+                <EditText
+                    android:id="@+id/etGraduationYear"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/graduationYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewbelowGraduationYear"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titleGraduation"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Graduation Marks in"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <RadioGroup
+                    android:id="@+id/graduationMarksRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/margin15">
+
+                    <RadioButton
+                        android:id="@+id/graduationMarksPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin20"
+                        android:checked="false"
+                        android:text="% Age"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/graduationMarksCgpa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="CGPA"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/cgpaGraduationLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/cgpaGraduationMarks"
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:minWidth="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14" />
+
+                    <EditText
+                        android:id="@+id/cgpaGraduationMax"
+                        style="@style/textViewStyle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="2"
+                        android:paddingRight="@dimen/margin10"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/percentageGraduationLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_white_background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/percGraduationMarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="00.00"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/marksGraduation"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter Graduation marks "
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewbelowGraduationMarks"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/postGraduationDoneLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/margin20"
+                android:paddingVertical="@dimen/margin5"
+                android:text="Do you have post graduation degree?"
+                android:textColor="@color/greish_black"
+                android:textSize="@dimen/textsize12" />
+
+
+            <RadioGroup
+                android:id="@+id/postGraduationDoneRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin10"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/margin15">
+
+                <RadioButton
+                    android:id="@+id/postGarduationYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Yes"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <RadioButton
+                    android:id="@+id/postGarduationNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin20"
+                    android:checked="false"
+                    android:text="No"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/postGradutaionDoneBelow"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/light_blue_grey"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/postGraduationDetailsMainLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Post Graduation Degree"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <EditText
+                    android:id="@+id/etPostGraduationDegree"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/postGraduationDegree"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingHorizontal="5dp" />
+
+                    <EditText
+                        android:id="@+id/otherPostGradutionET"
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/simple_white_background"
+                        android:editable="false"
+                        android:hint="Enter course Name"
+                        android:inputType="text"
+                        android:paddingHorizontal="@dimen/margin20"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/postGradutaionDegreeBelow"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:id="@+id/postGraduationSpecialisationLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Post Graduation Specialisation"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <EditText
+                    android:id="@+id/etPostGraduationSpecialisationDegree"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/postGraduationSpecialisationDegree"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingHorizontal="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/postGradutaionSpecialisationDegreeBelow"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Post Graduation Year"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+                <EditText
+                    android:id="@+id/etPostGraduationYear"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter course Name"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/postGraduationYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingHorizontal="5dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewbelowPostGraduationYear"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/titlePostGraduation"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:paddingVertical="@dimen/margin5"
+                    android:text="Post Graduation Marks in"
+                    android:textColor="@color/greish_black"
+                    android:textSize="@dimen/textsize12" />
+
+
+                <RadioGroup
+                    android:id="@+id/postGraduationMarksRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin20"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/margin15">
+
+
+                    <RadioButton
+                        android:id="@+id/postGraduationMarksPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin20"
+                        android:checked="false"
+                        android:text="% Age"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/postGraduationMarksCgpa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="CGPA"
+                        android:textColor="@color/black"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/cgpaPostGraduationLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/cgpaPostGraduationMarks"
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="0.0"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"
+                        android:minWidth="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/cool_grey1"
+                        android:textSize="@dimen/textsize14" />
+
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="/"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14" />
+
+                    <EditText
+                        android:id="@+id/cgpaPostGraduationMax"
+                        style="@style/textViewStyle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="2"
+                        android:paddingRight="@dimen/margin10"
+                        android:singleLine="true"
+                        android:text="10"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/percentagePostGraduationLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_white_background"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/percPostGraduationMarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="00.00"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize14"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/marksPostGraduation"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/simple_cool_grey_background"
+                    android:editable="false"
+                    android:hint="Enter Graduation marks "
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/margin20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/cool_grey1"
+                    android:textSize="@dimen/textsize14"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewbelowPostGraduationMarks"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/light_blue_grey" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/editAcademicDetail"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginBottom="@dimen/margin20"
+            android:text="Edit details of academic information"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/textsize14" />
+
+        <LinearLayout
+            android:id="@+id/savingCancelAcademicDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin20"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/saveAcademicDetail"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/curved_orangish_btn"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/cancelAcademicDetail"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin20"
+                android:layout_marginTop="@dimen/margin20"
+                android:layout_marginBottom="@dimen/margin20"
+                android:background="@drawable/curved_white_btn"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

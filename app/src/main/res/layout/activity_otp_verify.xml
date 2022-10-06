@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="@dimen/margin20"
+    android:paddingTop="@dimen/margin12"
+    android:paddingBottom="@dimen/margin30"
+    tools:context="com.myfutureapp.login.OtpVerifyActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textColor="@color/dark_orange"
+        android:textSize="@dimen/textsize16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_mobile_icon" />
+
+            <EditText
+                android:id="@+id/otpEditText"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="@dimen/margin10"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="OTP"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingHorizontal="@dimen/margin10"
+                android:paddingVertical="@dimen/margin10"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize16" />
+
+            <TextView
+                android:id="@+id/resendOtp"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin15"
+                android:layout_marginRight="@dimen/margin5"
+                android:text="RESEND OTP"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/textsize12" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bright_sky_blue" />
+
+        <TextView
+            android:id="@+id/otpStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:inputType="number"
+            android:text="OTP doesnt match"
+            android:textColor="@color/tomato"
+            android:textSize="@dimen/textsize16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/updateInfoTV"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin40"
+            android:text="Update Contact Info"
+            android:textColor="#4481ec"
+            android:textSize="@dimen/textsize14"
+            android:visibility="visible" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/mobilenumberTv"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="+91"
+            android:textColor="#4a4a4a"
+            android:textSize="@dimen/textsize14" />
+
+    </LinearLayout>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/verifyOtp"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_dark_black_btn"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_width="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

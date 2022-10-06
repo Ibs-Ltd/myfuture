@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/margin20"
+    android:layout_marginTop="@dimen/margin12"
+    android:layout_marginBottom="@dimen/margin30"
+    android:fitsSystemWindows="true"
+    tools:context="com.myfutureapp.profile.ui.AdditionalFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/barIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="42% complete"
+            android:textColor="@color/orange" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:maxHeight="15dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:progress="42"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/saveAdditionalDetails"
+        android:layout_below="@id/barIndicator"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="@dimen/margin10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin10"
+                android:gravity="center"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/laptopRequiredLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- TODO: Update blank fragment layout -->
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:text="Do you have laptop?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/yesLaptopLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/yesLaptopIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_tick_white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/yesLaptopTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="Yes"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/noLaptopLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/noLaptopIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_cross"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/noLaptopTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="No"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wifiRequiredLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!-- TODO: Update blank fragment layout -->
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:text="Do you have wifi?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/yesWifiLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/yesWifiIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_tick_white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/yesWifiTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="Yes"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/noWifiLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/noWifiIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_cross"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/noWifiTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="No"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/licenseRequiredLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical">
+
+                    <!-- TODO: Update blank fragment layout -->
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:text="Do you have driving license?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/yesLicenseLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/yesLicenseIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_tick_white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/yesLicenseTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="Yes"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/noLicenseLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/noLicenseIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_cross"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/noLicenseTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="No"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/twoWheelerRequiredLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:orientation="vertical">
+
+                    <!-- TODO: Update blank fragment layout -->
+                    <TextView
+                        style="@style/textViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica"
+                        android:gravity="center"
+                        android:text="Do you have 2 wheeler?"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize16"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/yesTwoWheelerLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/yesTwoWheelerIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_tick_white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/yesTwoWheelerTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="Yes"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/noTwoWheelerLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/margin30"
+                            android:layout_marginTop="@dimen/margin30"
+                            android:layout_marginBottom="@dimen/margin15"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/grey_btn_1"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingVertical="@dimen/margin5">
+
+                            <ImageView
+                                android:id="@+id/noTwoWheelerIV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/margin10"
+                                android:src="@drawable/ic_cross"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/noTwoWheelerTV"
+                                style="@style/textViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:paddingVertical="10dp"
+                                android:text="No"
+                                android:textColor="@color/warm_gray"
+                                android:textSize="@dimen/textsize16" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/saveAdditionalDetails"
+        style="@style/textViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_greish_btn_disable"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="Complete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.profile.ui.WorkYearExperienceFragment">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin30"
+        android:layout_marginTop="@dimen/margin10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/completeStatus"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin10"
+            android:gravity="center"
+            android:text="76% complete"
+            android:textColor="@color/orange" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin20"
+                android:maxWidth="15dp"
+                android:id="@+id/seekBar"
+                android:maxHeight="15dp"
+                android:minWidth="15dp"
+                android:minHeight="15dp"
+                android:progress="76"
+                android:progressDrawable="@drawable/custom_seekbar"
+                android:splitTrack="false"
+                android:thumb="@drawable/custom_thumb">
+
+            </SeekBar>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_dots" />
+        </RelativeLayout> </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin30"
+
+            android:layout_marginBottom="@dimen/margin15"
+            android:text="Do you have any work experience?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize16"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/margin15"
+            android:text="Yes"
+            android:textSize="@dimen/textsize16"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/textViewStyle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="Your work experience?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/year0_1"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin30"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="0-1 years"
+            android:textColor="@color/warm_gray"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/year1_2"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="1-2 years"
+            android:textColor="@color/warm_gray"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/year2_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textViewStyle"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="2-4 years"
+            android:textColor="@color/warm_gray"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/year4_5"
+            android:layout_width="match_parent"
+            style="@style/textViewStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="4-5 years"
+            android:textColor="@color/warm_gray"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:layout_marginBottom="@dimen/margin20"
+            android:id="@+id/year_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin30"
+            style="@style/textViewStyle"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@drawable/grey_btn"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="+5 years"
+            android:textColor="@color/warm_gray"
+            android:textSize="@dimen/textsize16" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.jobDetail.SuccessActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarHeight"
+        android:background="@color/white"
+        android:theme="@style/Theme.MyApplication.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:paddingVertical="@dimen/margin10"
+                    android:paddingRight="@dimen/margin10"
+                    android:id="@+id/hambarIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/toolbarTitle"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Success"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textsize16" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginVertical="10dp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_marginBottom="@dimen/margin15"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="@dimen/margin40"
+            android:gravity="center"
+            android:outlineAmbientShadowColor="@color/cool_grey"
+            android:outlineSpotShadowColor="@color/cool_grey"
+            android:paddingHorizontal="@dimen/margin5"
+            android:paddingVertical="@dimen/margin5"
+            app:cardCornerRadius="@dimen/margin5"
+            card_view:cardElevation="40dp"
+            card_view:cardPreventCornerOverlap="false">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/margin40"
+                android:layout_marginVertical="@dimen/margin30"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/maleGender"
+                    android:layout_width="256dp"
+                    android:layout_height="256dp"
+                    android:padding="@dimen/margin5"
+                    android:src="@drawable/ic_pop_up_success" />
+
+                <TextView
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:layout_marginRight="@dimen/margin15"
+                    android:text="You have applied successfully"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

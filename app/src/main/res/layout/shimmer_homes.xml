@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmerFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+
+    android:orientation="vertical"
+    android:paddingTop="@dimen/margin10"
+    tools:context="com.myfutureapp.dashboard.home.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ongoingTitle"
+            style="@style/textViewStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:background="@color/grey_color"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/textsize14" />
+
+        <include layout="@layout/shimmer_placeholder_application" />
+
+        <include layout="@layout/shimmer_placeholder_application" />
+
+        <include layout="@layout/shimmer_placeholder_application" />
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@color/grey_color"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            style="@style/textViewStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin10"
+            android:background="@color/grey_color"
+            android:paddingHorizontal="@dimen/margin20"
+            android:paddingVertical="@dimen/margin10"
+            android:text=""
+            android:textColor="@color/maroon"
+            android:textSize="@dimen/textsize14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_more_online_applications" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin15"
+            android:background="@color/grey_color"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin10"
+            android:paddingLeft="@dimen/margin15"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_application_status" />
+
+        <TextView
+            android:id="@+id/jobTitle"
+            style="@style/textViewStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin20"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginBottom="@dimen/margin10"
+            android:background="@color/grey_color"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/textsize14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/id_rv_job_title" />
+
+        <include layout="@layout/shimmer_placeholder_layout" />
+
+        <include layout="@layout/shimmer_placeholder_layout" />
+
+        <include layout="@layout/shimmer_placeholder_layout" />
+
+        <include layout="@layout/shimmer_placeholder_layout" />
+
+
+    </LinearLayout>
+
+
+</com.facebook.shimmer.ShimmerFrameLayout>

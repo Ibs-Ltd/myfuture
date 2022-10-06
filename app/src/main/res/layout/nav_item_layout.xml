@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/navMain"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin10">
+
+    <ImageView
+        android:layout_marginHorizontal="@dimen/margin10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/nav_sign_out"
+        android:id="@+id/nav_icon"/>
+
+    <TextView
+        android:id="@+id/navName"
+        android:paddingHorizontal="@dimen/margin10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Sign out"
+        style="@style/textViewStyle"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/textsize14"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>

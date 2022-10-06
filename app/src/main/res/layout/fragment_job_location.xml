@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.myfutureapp.profile.ui.GradeTenthFragment">
+
+
+    <RelativeLayout
+        android:layout_marginHorizontal="@dimen/margin20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/completeStatus"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin10"
+                    android:gravity="center"
+                    android:text="97% complete"
+                    android:textColor="@color/orange" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin20"
+                        android:maxWidth="15dp"
+                        android:maxHeight="15dp"
+                        android:minWidth="15dp"
+                        android:minHeight="15dp"
+                        android:progress="97"
+                        android:id="@+id/seekBar"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:splitTrack="false"
+                        android:thumb="@drawable/custom_thumb">
+
+                    </SeekBar>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/ic_dots" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin30"
+                android:layout_marginTop="@dimen/margin30"
+                android:text="Choose Preferred Job Location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize16" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin15"
+                android:layout_marginBottom="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/northArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="North"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:id="@+id/eastArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="East"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:id="@+id/centralArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Central"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:id="@+id/southArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="South"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:id="@+id/westArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin10"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="West"
+                    android:textColor="@color/warm_gray"
+                    android:textSize="@dimen/textsize16" />
+            </LinearLayout>
+
+            <View
+                android:layout_marginVertical="@dimen/margin5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#979797" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/jobLocationRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/belowLayout"
+            android:layout_below="@+id/topLayout">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/MineCustomTabText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/MineCustomTabText"
+                app:tabMode="auto" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tabs"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/belowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin15"
+                android:background="#979797" />
+
+            <LinearLayout
+                android:id="@+id/cityMainLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin10"
+                android:layout_marginVertical="@dimen/margin5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/cityunselected"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/cityunSelectedIV"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="@dimen/margin5"
+                        android:src="@drawable/ic_all_india_unselected" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/citySelected"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_male_unselected"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0.0px"
+                    android:elevation="@dimen/margin10"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    card_view:cardCornerRadius="@dimen/margin5"
+                    card_view:cardElevation="10dp"
+                    card_view:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/orange_btn"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/citySelectedIV"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:padding="@dimen/margin5"
+                            android:src="@drawable/ic_all_india_selected" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/cityNameTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:text="All India"
+                    android:textSize="@dimen/textsize10" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/contineJobLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin10"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_dark_black_btn"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize16"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

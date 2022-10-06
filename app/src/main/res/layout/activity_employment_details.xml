@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical"
+    tools:context="com.myfutureapp.dashboard.profile.ui.EmploymentDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margin20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_backEmploymentDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Employment Details"
+                android:textColor="#4a4a4a"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@+id/iv_delete"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_delele"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin40">
+
+            <RelativeLayout
+                android:id="@+id/rlfor"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <EditText
+                    android:id="@+id/et_Designation"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:background="@null"
+                    android:hint="Text Here"
+                    android:padding="@dimen/margin10"
+                    android:textColor="@color/quantum_grey"
+                    android:textColorHint="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="Designation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10">
+
+            <RelativeLayout
+                android:id="@+id/rlforCompany"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <EditText
+                    android:id="@+id/et_Company"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:background="@null"
+                    android:hint="Text Here"
+                    android:padding="@dimen/margin10"
+                    android:textColor="@color/quantum_grey"
+                    android:textColorHint="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="Company"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin15"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/jobTypeLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin10">
+
+                <TextView
+                    android:id="@+id/tv_Full_Time"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingLeft="@dimen/margin15"
+                    android:paddingTop="8dp"
+                    android:paddingRight="@dimen/margin15"
+                    android:paddingBottom="8dp"
+                    android:text="Full Time"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+                <TextView
+                    android:id="@+id/tv_Part_Time"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingLeft="@dimen/margin15"
+                    android:paddingTop="8dp"
+                    android:paddingRight="@dimen/margin15"
+                    android:paddingBottom="8dp"
+                    android:text="Part Time"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+                <TextView
+                    android:id="@+id/tv_Intern"
+                    style="@style/textViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_black_white_background"
+                    android:paddingLeft="@dimen/margin15"
+                    android:paddingTop="8dp"
+                    android:paddingRight="@dimen/margin15"
+                    android:paddingBottom="8dp"
+                    android:text="Intern"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize12" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10">
+
+            <RelativeLayout
+                android:id="@+id/rlforSalaryper_Annum_CTC"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <EditText
+                    android:id="@+id/et_Salaryper_Annum_CTC"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:background="@null"
+                    android:hint="Text Here"
+                    android:inputType="number"
+                    android:padding="@dimen/margin10"
+                    android:textColor="@color/quantum_grey"
+                    android:textColorHint="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="Salary in Lakhs per Annum (CTC)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10">
+
+            <RelativeLayout
+                android:id="@+id/rlforStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <TextView
+                    android:id="@+id/tv_date_Start_Month"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:layout_toLeftOf="@id/iv_StartMonthcalander"
+                    android:padding="@dimen/margin10"
+                    android:text="DD MM YYYY"
+                    android:textColor="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+                <ImageView
+                    android:id="@+id/iv_StartMonthcalander"
+                    android:layout_width="@dimen/margin40"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_calender_icon" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_StartMonthDate"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="Start Month"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/endMonthRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10">
+
+            <RelativeLayout
+                android:id="@+id/rlforEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <TextView
+                    android:id="@+id/tv_date_End_Month"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:layout_toLeftOf="@id/iv_EndMonthcalander"
+                    android:padding="@dimen/margin10"
+                    android:text="DD MM YYYY"
+                    android:textColor="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+                <ImageView
+                    android:id="@+id/iv_EndMonthcalander"
+                    android:layout_width="@dimen/margin40"
+                    android:layout_height="@dimen/margin40"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin20"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_calender_icon" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_EndMonthDate"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="End Month"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/currentlyWorkingLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin15"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:clickable="false"
+                android:layout_gravity="center"
+                android:id="@+id/currentWorkingCheckBox"
+                android:layout_width="@dimen/margin30"
+                android:layout_height="@dimen/margin30"
+                android:gravity="top" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin10"
+                android:id="@+id/termsConditionTv"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Currently Working here"
+                android:textColor="@color/black_three"
+                android:textSize="@dimen/textsize14" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10">
+
+            <RelativeLayout
+                android:id="@+id/rlforJob_Description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@drawable/emp_detail_background">
+
+                <EditText
+                    android:id="@+id/et_Job_Description"
+                    style="@style/textViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin15"
+                    android:layout_marginLeft="@dimen/margin25"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="Text Here"
+                    android:padding="@dimen/margin10"
+                    android:textColor="@color/quantum_grey"
+                    android:textColorHint="@color/quantum_grey"
+                    android:textSize="@dimen/textsize14" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin25"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10"
+                android:text="Job Description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize14" />
+        </RelativeLayout>
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/tv_SAVE"
+            style="@style/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin20"
+            android:layout_marginBottom="@dimen/margin20"
+            android:background="@drawable/rounded_greish_btn_disable"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="SAVE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_width="4dp" />
+
+    </LinearLayout>
+</ScrollView>
